@@ -1,12 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class NewsItem extends Component {
+// export default class NewsItem extends Component {
+    // render() {
+const NewsItem = (props)=>{
+      // we have to extract some props so we are destructuring here 
 
-    // we have to extract some props so we are destructuring here 
+        // let { title, description, imageUrl, newsUrl, author, date, source } = this.props;
+        // console.log(description === null ? description : title)
+        let { title, description, imageUrl, newsUrl, author, date, source } = props;
 
-    render() {
-        let { title, description, imageUrl, newsUrl, author, date, source } = this.props;
-        console.log(description === null ? description : title)
         return (
             <div className='my-3'>
 
@@ -37,4 +39,4 @@ export default class NewsItem extends Component {
             </div >
         )
     }
-}
+export default NewsItem;
